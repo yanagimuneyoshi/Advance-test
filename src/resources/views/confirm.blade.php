@@ -16,49 +16,53 @@
     <div class="confirm__heading">
       <h2>内容確認</h2>
     </div>
-    <form class="form">
+    <form class="form" action="/contacts" method="post">
+      @csrf
       <div class="confirm-table">
         <table class="confirm-table__inner">
           <tr class="confirm-table__row">
             <th class="confirm-table__header">お名前</th>
-            <td class="confirm-table__text">
-              <input type="text" name="name" value="山田　太郎" />
+            <td class="confirm-table__text_up">
+              <input type="text" name="family-name" value="{{ $contact['family-name'] }}" readonly />
+            </td>
+            <td class="confirm-table__text_down">
+              <input type="text" name="given-name" value="{{ $contact['given-name'] }}" readonly />
             </td>
           </tr>
-          <tr class="confirm-table__row">
+          <tr class=" confirm-table__row">
             <th class="confirm-table__header">性別</th>
             <td class="confirm-table__text">
-              <input type="radio" name="性別" value="男性" 　 />
+              <input type="text" name="gender" value="{{ $contact['gender'] }}" readonly />
             </td>
           </tr>
           <tr class=" confirm-table__row">
             <th class="confirm-table__header">メールアドレス</th>
             <td class="confirm-table__text">
-              <input type="email" name="email" value="test@example.com" />
+              <input type="email" name="email" value="{{ $contact['email'] }}" readonly />
             </td>
           </tr>
           <tr class="confirm-table__row">
             <th class="confirm-table__header">郵便番号</th>
             <td class="confirm-table__text">
-              <input type="text" name="postalCode" value="123-4567" />
+              <input type="postcode" name="postcode" value="{{ $contact['postcode'] }}" readonly />
             </td>
           </tr>
           <tr class="confirm-table__row">
             <th class="confirm-table__header">住所</th>
             <td class="confirm-table__text">
-              <input type="address" name="address" value="東京都渋谷区千駄ヶ谷1-2-3" />
+              <input type="address" name="address" value="{{ $contact['address'] }}" readonly />
             </td>
           </tr>
           <tr class="confirm-table__row">
             <th class="confirm-table__header">建物名</th>
             <td class="confirm-table__text">
-              <input type="text" name="text" value="千駄ヶ谷マンション101" />
+              <input type="text" name="building_name" value="{{ $contact['building_name'] }}" readonly />
             </td>
           </tr>
           <tr class="confirm-table__row">
             <th class="confirm-table__header">ご意見</th>
             <td class="confirm-table__text">
-              <input type="text" name="text" value="いつもお世話になっております。先日、貴社製品を購入させていただきました。この度、不具合が生じ、説明書に沿って操作を進めていましたが上手く行きませんでした。どのように直せば良いかご教授いただきたいです。" />
+              <input type="text" name="opinion" value="{{ $contact['opinion'] }}" readonly />
             </td>
           </tr>
         </table>

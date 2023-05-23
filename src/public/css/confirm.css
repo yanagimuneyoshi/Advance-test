@@ -20,17 +20,31 @@
   font-weight: bold;
 }
 
-.confirm-table__text {
-  padding: 1px;
 
-}
 
 .confirm-table__text input {
 
   width: 100%;
 
-  margin: 0px;
+  margin: 1px;
+  padding: 100px;
+  outline: none;
+  border: none;
+}
+.confirm-table__text_up input {
+
+  width: 100%;
+
+  margin: 0px 0px 0px 50px;
   padding: 50px;
+  outline: none;
+  border: none;
+}
+
+.confirm-table__text_down input{
+
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
   outline: none;
   border: none;
 }

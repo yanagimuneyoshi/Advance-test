@@ -89,11 +89,11 @@
 }
 
 
-.form__group-title--adress {
+.form__group-title--address {
   margin: -25px 0px 0px 300px;
 }
 
-.form__group-title--adress input {
+.form__group-title--address input {
   padding: 1px;
   width: 400px;
   border: 1px solid #ddd;
