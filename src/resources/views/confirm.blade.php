@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
   <meta charset="UTF-8">
@@ -65,7 +65,9 @@
       </div>
       <div class="form__button">
         <button class="form__button-submit" type="submit">送信</button>
-        <button class="form__button__fix-submit" type="submit">修正</button>
+      </div>
+      <div class="form__button__fix">
+        <button class="form__button__fix-submit" type="submit">修正する</button>
       </div>
     </form>
   </div>
