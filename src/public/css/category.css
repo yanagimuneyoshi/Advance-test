@@ -1,0 +1,88 @@
+.contact-form__content {
+  margin: 0 auto;
+  padding: 100px 15px;
+  max-width: 1230px;
+}
+
+.contact-form__heading {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.form {
+  border: solid 1px #000000;
+  margin: 10px 30px;
+}
+
+.form__group-title--name {
+  margin: 30px 10px;
+
+}
+
+.form__input--text--name {
+  margin: -55px 200px 100px;
+}
+
+.form__group-title--gender {
+  margin: -120px 500px 100px;
+}
+
+.form-man--all {
+  margin: -125px 500px 100px 600px;
+}
+
+.form-man {
+  margin: -125px 700px 0px 700px;
+}
+
+.form-woman {
+  margin: -48px 600px 0px 780px;
+
+}
+
+.form__group-title--day {
+  margin: 30px 10px;
+}
+
+.form__input--text--datetime {
+  margin: -55px 0px 10px 200px;
+}
+
+.form__group-title--email {
+  margin: 30px 10px;
+}
+
+.form__input--text--email {
+  margin: -55px 0px 10px 200px;
+}
+
+
+.form__button {
+  margin-top: 70px;
+  text-align: center;
+}
+
+.form__button-submit {
+  padding: 10px;
+  width: 10%;
+  height: 40px;
+  border: none;
+  border-radius: 3px;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.form__button__fix-reset {
+  margin-top: 0px;
+  text-align: center;
+}
+
+.form__button__fix-submit {
+  padding: 0px;
+  width: 5%;
+  height: 0px;
+  border: none;
+  text-decoration: underline;
+
+}
