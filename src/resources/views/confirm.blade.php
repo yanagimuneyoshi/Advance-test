@@ -32,7 +32,7 @@
           <tr class=" confirm-table__row">
             <th class="confirm-table__header">性別</th>
             <td class="confirm-table__text">
-              <input type="text" name="gender" value="{{ $contact['gender'] }}" readonly />
+              <input type="te" name="gender" value="{{ $contact['gender'] }}" readonly />
             </td>
           </tr>
           <tr class=" confirm-table__row">
@@ -61,7 +61,7 @@
           </tr>
           <tr class="confirm-table__row">
             <th class="confirm-table__header">ご意見</th>
-            <td class="confirm-table__text">
+            <td class="confirm-table__text_opinion">
               <input type="text" name="opinion" value="{{ $contact['opinion'] }}" readonly />
             </td>
           </tr>
@@ -70,9 +70,10 @@
       <div class="form__button">
         <button class="form__button-submit" type="submit">送信</button>
       </div>
-      <div class="form__button__fix">
-        <button class="form__button__fix-submit" type="submit">修正する</button>
-      </div>
+    </form>
+    <form class="form__button__fix" action="/" method="post">
+      @csrf
+      <button class="form__button__fix-submit" type="submit">修正する</button>
     </form>
   </div>
 </main>

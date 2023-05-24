@@ -25,11 +25,14 @@
         </div>
         <div class="form__group-content">
           <div class="form__input--text--name">
-            <input type="text" name="family-name" placeholder="テスト太郎" />
-            <input type="text" name="given-name" autocomplete="given-name" />
+            <input type="text" name="family-name" placeholder="テスト太郎" value="{{ old('family-name') }}" />
+            <input type="text" name="given-name" autocomplete="given-name" value="{{ old('given-name') }}" />
           </div>
           <div class="form__error">
             <!--バリデーション機能を実装したら記述します。-->
+            @error('family-name')
+            {{ $message }}
+            @enderror
           </div>
         </div>
       </div>
@@ -41,7 +44,7 @@
         </div>
         <div class="form-body">
           <div class="form-man">
-            <input type="radio" name="gender" value="男"/>
+            <input type="radio" name="gender" value="男" checked />
             <span class="form-sex-txt">男</span>
           </div>
           <div class="form-woman">
@@ -58,10 +61,13 @@
         </div>
         <div class="form__group-content">
           <div class="form__input--text--email">
-            <input type="email" name="email" placeholder="test@example.com" />
+            <input type="email" name="email" placeholder="test@example.com" value="{{ old('email') }}" />
           </div>
           <div class="form__error">
             <!--バリデーション機能を実装したら記述します。-->
+            @error('email')
+            {{ $message }}
+            @enderror
           </div>
         </div>
       </div>
@@ -73,10 +79,13 @@
         </div>
         <div class="form__input--post">
           <span class="form__label--required--post">〒</span>
-          <input type="text" id="postcode" name="postcode" maxlength="8" pattern="[0-9]{3}-[0-9]{4}" placeholder="例）123-4567" />
+          <input type="text" id="postcode" name="postcode" maxlength="8" pattern="[0-9]{3}-[0-9]{4}" placeholder="例）123-4567" value="{{ old('postcode') }}" />
         </div>
         <div class="form__error">
           <!--バリデーション機能を実装したら記述します。-->
+          @error('postcode')
+          {{ $message }}
+          @enderror
         </div>
       </div>
 
@@ -86,10 +95,13 @@
           <span class="form__label--required">※</span>
         </div>
         <div class="form__group-title--address">
-          <input id="address" name="address" placeholder="例）東京都渋谷区千駄ヶ谷1-2-3" />
+          <input id="address" name="address" placeholder="例）東京都渋谷区千駄ヶ谷1-2-3" value="{{ old('address') }}" />
         </div>
         <div class="form__error">
           <!--バリデーション機能を実装したら記述します。-->
+          @error('address')
+          {{ $message }}
+          @enderror
         </div>
       </div>
 
@@ -107,10 +119,13 @@
           <span class="form__label--required">※</span>
         </div>
         <div class="form__group-title--opinion">
-          <textarea name="opinion" cols="30" rows="3"></textarea>
+          <textarea name="opinion" maxlength="120" cols="40" rows="10" value="{{ old('opinion') }}"></textarea>
         </div>
         <div class="form__error">
           <!--バリデーション機能を実装したら記述します。-->
+          @error('opinion')
+          {{ $message }}
+          @enderror
         </div>
       </div>
       <div class="form__button">

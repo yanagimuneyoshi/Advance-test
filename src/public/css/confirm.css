@@ -25,8 +25,6 @@
 .confirm-table__text input {
 
   width: 100%;
-
-  margin: 1px;
   padding: 100px;
   outline: none;
   border: none;
@@ -34,19 +32,28 @@
 .confirm-table__text_up input {
 
   width: 100%;
-
-  margin: 0px 0px 0px 50px;
+  margin: 0px 0px 0px 70px;
   padding: 50px;
   outline: none;
   border: none;
 }
 
-.confirm-table__text_down input{
+.confirm-table__text_down input {
 
   margin: 0px 0px 0px 0px;
   padding: 0px;
   outline: none;
   border: none;
+}
+
+.confirm-table__text_opinion input {
+  width: 500px;
+  padding: 100px;
+  height: 100px;
+  border: none;
+  appearance: none;
+
+
 }
 
 .confirm-table__row:last-child .confirm-table__header,
