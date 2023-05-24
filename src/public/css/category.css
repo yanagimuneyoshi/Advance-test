@@ -35,6 +35,10 @@
   margin: -125px 700px 0px 700px;
 }
 
+.form-man span {
+  margin: 0px 10px;
+}
+
 .form-woman {
   margin: -48px 600px 0px 780px;
 
@@ -85,4 +89,33 @@
   border: none;
   text-decoration: underline;
 
+}
+
+
+.category-table__inner {
+  margin-bottom: 20px;
+  text-align: left;
+
+}
+
+
+
+.category-table__row th {
+  display: inline-block;
+  padding: 40px;
+  height: 10px;
+  border: 10px;
+  border-bottom: 1px solid #333;
+  width: 90px;
+
+}
+
+.update-form__item--type input {
+
+  margin: 0px 0px 10px 20px;
+
+}
+
+.delete-form__button {
+  margin: 10px 0px 0px 270px;
 }

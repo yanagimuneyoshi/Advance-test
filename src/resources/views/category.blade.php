@@ -94,7 +94,7 @@
           <tr class="category-table__row">
             <td class="category-table__item">
               <form class="update-form">
-                <div class="update-form__item">
+                <div class="update-form__item--type">
                   <input class="update-form__item-input" type="text">
                   <input class="update-form__item-input" type="text">
                   <input class="update-form__item-input" type="text">
