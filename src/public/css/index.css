@@ -45,7 +45,7 @@
   color: #ff0000;
 }
 
-.form__group-content {}
+
 
 
 
@@ -64,6 +64,23 @@
   height: 40px;
   appearance: none;
 }
+
+
+
+.small-txt-tarou {
+  margin: 150px;
+
+}
+
+.small-txt-address {
+  margin: 0px 10px 0px 300px;
+}
+
+.small-txt-postcode {
+  margin: -100px 10px 100px 320px;
+}
+
+
 
 .form__input--text--email input {
   padding: 1px;

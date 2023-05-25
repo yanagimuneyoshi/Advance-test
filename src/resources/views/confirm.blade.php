@@ -23,7 +23,7 @@
           <tr class="confirm-table__row">
             <th class="confirm-table__header">お名前</th>
             <td class="confirm-table__text_up">
-              <input type="text" name="family-name" value="{{ $contact['family-name'] }}" readonly />
+              <input type="text" name="family-name" value="{{ $contact['family-name'] }}"  readonly />
             </td>
             <td class="confirm-table__text_down">
               <input type="text" name="given-name" value="{{ $contact['given-name'] }}" readonly />
