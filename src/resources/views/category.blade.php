@@ -22,7 +22,7 @@
         </div>
         <div class="form__group-content">
           <div class="form__input--text--name">
-            <input type="text" name="family-name" placeholder="テスト太郎" />
+            <input type="text" name="family-name" />
           </div>
         </div>
       </div>
@@ -33,15 +33,21 @@
         <div class="form-body">
           <div class="form-man--all">
             <input type="radio" name="gender" value="全て" checked />
-            <span class="form-sex-txt-all">全て</span>
+          </div>
+          <div class="form-man--all--letter">
+            <span class=" form-sex-txt-all">全て</span>
           </div>
           <div class="form-body">
             <div class="form-man">
               <input type="radio" name="gender" value="男" />
+            </div>
+            <div class="form-sex-txt">
               <span class="form-sex-txt">男</span>
             </div>
             <div class="form-woman">
               <input type="radio" name="gender" value="女" />
+            </div>
+            <div class="form-woman-letter">
               <span class="form-sex-txt">女</span>
             </div>
           </div>
@@ -90,16 +96,16 @@
             <th class="category-table__header__email">メールアドレス</th>
             <th class="category-table__header__opinion">ご意見</th>
           </tr>
-
+          <tr class="style"></tr>
           <tr class="category-table__row">
             <td class="category-table__item">
               <form class="update-form">
                 <div class="update-form__item--type">
-                  <input class="update-form__item-input" type="text">
-                  <input class="update-form__item-input" type="text">
-                  <input class="update-form__item-input" type="text">
-                  <input class="update-form__item-input" type="address">
-                  <input class="update-form__item-input" type="text">
+                  <input class="update-form__item-input1" type="ID">
+                  <input class="update-form__item-input2" type="name">
+                  <input class="update-form__item-input3" type="gender">
+                  <input class="update-form__item-input4" type="address">
+                  <input class="update-form__item-input5" type="text">
                 </div>
               </form>
             </td>

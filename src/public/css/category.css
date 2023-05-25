@@ -31,8 +31,16 @@
   margin: -125px 500px 100px 600px;
 }
 
+.form-man--all--letter {
+  margin: -125px 300px 100px 620px;
+}
+
+.form-sex-txt {
+  margin: -26px 300px 100px 360px;
+}
+
 .form-man {
-  margin: -125px 700px 0px 700px;
+  margin: -123px 700px 0px 700px;
 }
 
 .form-man span {
@@ -40,8 +48,13 @@
 }
 
 .form-woman {
-  margin: -48px 600px 0px 780px;
+  margin: -123px 600px 0px 780px;
 
+}
+
+.form-woman-letter {
+
+  margin: -24px 600px 0px 450px;
 }
 
 .form__group-title--day {
@@ -93,22 +106,80 @@
 
 
 .category-table__inner {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   text-align: left;
 
 }
 
 
 
-.category-table__row th {
-  display: inline-block;
-  padding: 40px;
-  height: 10px;
-  border: 10px;
-  border-bottom: 1px solid #333;
-  width: 90px;
-
+.category-table__row {
+  display: flex;
+  margin: 10px 0px 0px 35px;
+  padding: 10px;
+  list-style-type: none;
 }
+
+
+
+
+
+
+
+.category-table__header__ID {
+  width: 100px;
+  margin: 0px 0px 0px 30px;
+}
+.category-table__header__name {
+  width: 100px;
+}
+
+.category-table__header__gender {
+  width: 100px;
+  margin: 0px 0px 0px 50px;
+}
+
+.category-table__header__email {
+  width: 120px;
+  margin: 0px 0px 0px 0px;
+}
+
+.category-table__header__opinion {
+  width: 100px;
+  margin: 0px 0px 0px 70px;
+}
+
+.style {
+  border-top: 3px double #8c8b8b;
+}
+
+
+
+
+
+
+
+
+.update-form__item-input1 {
+  width: 50px;
+}
+
+.update-form__item-input3 {
+  width: 50px;
+}
+
+
+
+.update-form__item-input4 {
+  width: 190px;
+}
+
+
+
+.update-form__item-input5 {
+  width: 250px;
+}
+
 
 .update-form__item--type input {
 
@@ -117,5 +188,5 @@
 }
 
 .delete-form__button {
-  margin: 10px 0px 0px 270px;
+  margin: 0px 0px 0px 270px;
 }
