@@ -14,10 +14,8 @@ class CreateContactsTable extends Migration
     public function up()
     {
         Schema::create('contacts', function (Blueprint $table) {
+            //$table->foreignId('category_id')->nullable()->references('id')->on('categories');
             $table->id();
-            //$table->string('family-name');
-            //$table->string('given-name');
-          //  $table->foreignId('category_id')->constrained()->cascadeOnDelete();
             $table->string('fullname');
             $table->string('gender');
             $table->string('email');
@@ -25,6 +23,9 @@ class CreateContactsTable extends Migration
             $table->string('address');
             $table->text('building_name')->nullable();
             $table->string('opinion');
+            //$table->foreignId('category_id')->nullable()->references('id')->on('categories');
+            //$table->foreignId('category_id')->nullable()->constrained('categories')->cascadeOnDelete();
+            //$table->foreignId('category_id')->constrained('categories')->cascadeOnDelete();
             $table->timestamps();
         });
     }
@@ -35,6 +36,7 @@ class CreateContactsTable extends Migration
      * @return void
      */
     public function down()
+
     {
         Schema::dropIfExists('contacts');
     }

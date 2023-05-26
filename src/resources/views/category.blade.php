@@ -15,14 +15,15 @@
     <div class="contact-form__heading">
       <h2>管理システム</h2>
     </div>
-    <form class="form">
+    <form class="form" method="POST" action="/search">
+      <!-- 他のフォーム要素と同様に、名前、性別、メールアドレスのフィールドを追加 -->
       <div class="form__group">
         <div class="form__group-title--name">
           <span class="form__label--item--name">お名前</span>
         </div>
         <div class="form__group-content">
           <div class="form__input--text--name">
-            <input type="text" name="family-name" />
+            <input type="text" name="name" />
           </div>
         </div>
       </div>
@@ -31,25 +32,24 @@
           <span class="form__label--item">性別</span>
         </div>
         <div class="form-body">
+          <!-- 性別の選択肢 -->
           <div class="form-man--all">
-            <input type="radio" name="gender" value="全て" checked />
+            <input type="radio" name="gender" value="全て" checked>
           </div>
           <div class="form-man--all--letter">
             <span class="form-sex-txt-all">全て</span>
           </div>
-          <div class="form-body">
-            <div class="form-man">
-              <input type="radio" name="gender" value="男"  />
-            </div>
-            <div class="form-sex-txt">
-              <span class="form-sex-txt">男</span>
-            </div>
-            <div class="form-woman">
-              <input type="radio" name="gender" value="女" />
-            </div>
-            <div class="form-woman-letter">
-              <span class="form-sex-txt">女</span>
-            </div>
+          <div class="form-man">
+            <input type="radio" name="gender" value="男">
+          </div>
+          <div class="form-sex-txt">
+            <span class="form-sex-txt">男</span>
+          </div>
+          <div class="form-woman">
+            <input type="radio" name="gender" value="女">
+          </div>
+          <div class="form-woman-letter">
+            <span class="form-sex-txt">女</span>
           </div>
         </div>
       </div>
@@ -78,6 +78,7 @@
       <div class="form__button">
         <button class="form__button-submit" type="submit">検索</button>
       </div>
+
       <form class="form__button__fix" action="/" method="post">
         <div class="form__button__fix-reset">
           <button class="form__button__fix-submit" type="submit" action="/categories" method="post">リセット</button>

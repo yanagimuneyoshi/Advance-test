@@ -24,4 +24,7 @@ Route::post('/contacts', [ContactController::class, 'store']);
 
 Route::post('/', [ContactController::class, 'index']);
 
-//Route::get('/categories', [CategoryController::class, 'index']);
+Route::get('/categories', [CategoryController::class, 'category']);
+
+
+Route::post('/search', 'SearchController@search');
