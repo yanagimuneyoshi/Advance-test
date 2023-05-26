@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ContactRequest;
 use App\Models\Contact;
+use App\Models\Category;
+use Illuminate\Http\Request;
 
 $familyName;
 $giveName;
@@ -16,23 +18,43 @@ class ContactController extends Controller
         return view('index');
     }
 
+    //public function index()
+   /// {
+   //     $category= Todo::with('category')->get();
+    //    $categories = Category::all();
+   // }
 
-    public function store(ContactRequest $request )
+
+
+
+
+
+
+    public function store(ContactRequest $request)
     {
-        //$contact = $request->only(['full_name', 'gender', 'email', 'postcode', 'address', ////'building_name', 'opinion']);
-        //$familyName = $_POST['family-name'];
-        //$giveName = $_POST['given-name'];
-        //$full_name = $familyName. $giveName;
-        $contact = $request->only(['family-name','given-name', 'gender', 'email', 'postcode', 'address', 'building_name', 'opinion']);
-        //$contact=([$fullName, $_POST['gender']]);
-        //print $fullName;
-        //print $contact[0];
-        //return view('confirm',  ['contact' => $contact]);
+        $familyname = $request->input('family-name');
+        $givenname = $request->input('given-name');
+        $fullname = $familyname . ' ' . $givenname;
+
+        $contact = [
+            'fullname' => $fullname,
+            'gender' => $request->input('gender'),
+            'email' => $request->input('email'),
+            'postcode' => $request->input('postcode'),
+            'address' => $request->input('address'),
+            'building_name' => $request->input('building_name'),
+            'opinion' => $request->input('opinion'),
+        ];
+
         Contact::create($contact);
+
         return view('thanks', ['contact' => $contact]);
-
-
     }
+
+
+
+
+
 
 
     public function confirm(ContactRequest $request)
@@ -40,9 +62,8 @@ class ContactController extends Controller
 
         $contact = $request->only(['family-name', 'given-name', 'gender','email', 'postcode', 'address', 'building_name', 'opinion']);
 
-        Contact::create($contact);
 
-        //return view('thanks', ['contact' => $contact]);
+
         return view('confirm',  ['contact' => $contact]);
 
 

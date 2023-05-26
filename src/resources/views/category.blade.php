@@ -35,11 +35,11 @@
             <input type="radio" name="gender" value="全て" checked />
           </div>
           <div class="form-man--all--letter">
-            <span class=" form-sex-txt-all">全て</span>
+            <span class="form-sex-txt-all">全て</span>
           </div>
           <div class="form-body">
             <div class="form-man">
-              <input type="radio" name="gender" value="男" />
+              <input type="radio" name="gender" value="男"  />
             </div>
             <div class="form-sex-txt">
               <span class="form-sex-txt">男</span>
@@ -80,7 +80,7 @@
       </div>
       <form class="form__button__fix" action="/" method="post">
         <div class="form__button__fix-reset">
-          <button class="form__button__fix-submit" type="submit">リセット</button>
+          <button class="form__button__fix-submit" type="submit" action="/categories" method="post">リセット</button>
         </div>
       </form>
     </form>
