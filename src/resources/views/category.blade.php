@@ -98,26 +98,22 @@
             <th class="category-table__header__opinion">ご意見</th>
           </tr>
           <tr class="style"></tr>
+          @foreach ($results as $result)
           <tr class="category-table__row">
-            <td class="category-table__item">
-              <form class="update-form">
-                <div class="update-form__item--type">
-                  <input class="update-form__item-input1" type="ID">
-                  <input class="update-form__item-input2" type="name">
-                  <input class="update-form__item-input3" type="gender">
-                  <input class="update-form__item-input4" type="address">
-                  <input class="update-form__item-input5" type="text">
-                </div>
-              </form>
-            </td>
-            <td class="category-table__item">
-              <form class="delete-form">
-                <div class="delete-form__button">
-                  <button class="delete-form__button-submit" type="submit">削除</button>
-                </div>
-              </form>
-            </td>
+            <td class="category-table__item1">{{ $result->id }}</td>
+            <td class="category-table__item2">{{ $result->fullname }}</td>
+            <td class="category-table__item3">{{ $result->gender }}</td>
+            <td class="category-table__item4">{{ $result->email }}</td>
+            <td class="category-table__item5">{{ $result->opinion }}</td>
           </tr>
+          <td class="category-table__item">
+            <form class="delete-form">
+              <div class="delete-form__button">
+                <button class="delete-form__button-submit" type="submit">削除</button>
+              </div>
+            </form>
+          </td>
+          @endforeach
         </table>
       </div>
     </form>

@@ -86,6 +86,7 @@
         <div class="form__input--post">
           <span class="form__label--required--post">〒</span>
           <input type="text" id="postcode" name="postcode" maxlength="8" pattern="[0-9]{3}-[0-9]{4}" value="{{ old('postcode') }}" />
+          <button class="api-address" type="button">住所を自動入力</button>
         </div>
         <div class="small-txt-postcode">
           <small class="small-txt-post">例）123-4567</small>
@@ -155,5 +156,29 @@
     </form>
   </div>
 </main>
-
+<script>
+  //イベントリスナの設置：ボタンをクリックしたら反応する
+  document.querySelector('.api-address').addEventListener('click', () => {
+    //郵便番号を入力するテキストフィールドから値を取得
+    const elem = document.querySelector('#postcode');
+    const postcode = elem.value.substr(0, 3) + elem.value.substr(4, 4);
+    //fetchでAPIからJSON文字列を取得する
+    fetch('../address/' + postcode)
+      .then((data) => data.json())
+      .then((obj) => {
+        //郵便番号が存在しない場合，空のオブジェクトが返ってくる
+        //オブジェクトが空かどうかを判定
+        if (!Object.keys(obj).length) {
+          //オブジェクトが空の場合
+          txt = '住所が存在しません。'
+        } else {
+          //オブジェクトが存在する場合
+          //住所は分割されたデータとして返ってくるので連結する
+          txt = obj.pref + obj.city + obj.town;
+        }
+        //住所を入力するテキストフィールドに文字列を書き込む
+        document.querySelector('#address').value = txt;
+      });
+  });
+</script>
 </html>

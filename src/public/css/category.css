@@ -140,13 +140,13 @@
 }
 
 .category-table__header__email {
-  width: 120px;
-  margin: 0px 0px 0px 0px;
+  width: 150px;
+  margin: 0px 0px 0px 30px;
 }
 
 .category-table__header__opinion {
   width: 100px;
-  margin: 0px 0px 0px 70px;
+  margin: 0px 0px 0px 120px;
 }
 
 .style {
@@ -160,33 +160,44 @@
 
 
 
-.update-form__item-input1 {
+.category-table__item1 {
+  width: 70px;
+  margin: 0px 0px 0px 30px;
+}
+
+.category-table__item2 {
+  width: 100px;
+  margin: 0px 0px 0px 10px;
+}
+
+
+
+.category-table__item3 {
   width: 50px;
-}
-
-.update-form__item-input3 {
-  width: 50px;
+  margin: 0px 0px 0px 80px;
 }
 
 
-
-.update-form__item-input4 {
-  width: 190px;
+.category-table__item4 {
+  width: 350px;
 }
 
 
+.category-table__item5 {
 
-.update-form__item-input5 {
-  width: 250px;
-}
-
-
-.update-form__item--type input {
-
-  margin: 0px 0px 10px 20px;
-
+  width: 290px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .delete-form__button {
-  margin: 0px 0px 0px 270px;
+  margin: -40px 0px 0px 1100px;
+}
+.delete-form__button-submit {
+  border: none;
+  border-radius: 3px;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
 }

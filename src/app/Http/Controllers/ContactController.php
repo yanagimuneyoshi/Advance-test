@@ -18,15 +18,6 @@ class ContactController extends Controller
         return view('index');
     }
 
-    //public function index()
-   /// {
-   //     $category= Todo::with('category')->get();
-    //    $categories = Category::all();
-   // }
-
-
-
-
 
 
 

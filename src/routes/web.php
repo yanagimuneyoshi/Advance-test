@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\Api\AddressController;
 
 
 /*
@@ -28,3 +29,5 @@ Route::get('/categories', [CategoryController::class, 'category']);
 
 
 Route::post('/search', 'SearchController@search');
+
+Route::get('/address/{zip}', [AddressController::class, 'address']);
