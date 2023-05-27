@@ -79,6 +79,7 @@
           </form>
         </div>
       </form>
+      <div>{{ $results->links() }}</div>
       <div class="category-table">
         <table class="category-table__inner">
           <tr>

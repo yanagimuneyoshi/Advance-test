@@ -21,8 +21,8 @@ class SearchController extends Controller
         $end = $request->input('datetime-local-end');
         $email = $request->input('email');
 
-        $query = DB::table('contacts')
-            ->select('id', 'fullname', 'gender', 'email', 'opinion');
+        $query = Contact::select('id', 'fullname', 'gender', 'email', 'opinion');
+
 
         // 各条件に基づいて検索クエリを追加
         if ($fullname) {
@@ -38,9 +38,7 @@ class SearchController extends Controller
             $query->where('email', $email);
         }
 
-        $results = $query->get();
-
-
+        $results = $query->paginate(2);
 
         return view('category', compact('results'));
 

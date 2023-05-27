@@ -57,9 +57,15 @@
 }
 
 .form__button {
-  margin-top: 50px;
+  width: 100%;
   text-align: center;
 }
+.form__button__fix-reset {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 0px;
+}
+
 
 .form__button-submit {
   padding: 10px;
@@ -72,10 +78,7 @@
   cursor: pointer;
 }
 
-.form__button__fix-reset {
-  margin-top: 30px;
-  text-align: center;
-}
+
 
 .form__button__fix-submit {
   padding: 0px;
