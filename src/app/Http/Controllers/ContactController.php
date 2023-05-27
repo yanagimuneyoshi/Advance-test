@@ -25,12 +25,12 @@ class ContactController extends Controller
 
     public function store(ContactRequest $request)
     {
-        $familyname = $request->input('family-name');
-        $givenname = $request->input('given-name');
-        $fullname = $familyname . ' ' . $givenname;
+        $familyName = $request->input('family-name');
+        $givenName = $request->input('given-name');
+        $fullName = $familyName . $givenName;
 
         $contact = [
-            'fullname' => $fullname,
+            'fullname' => $fullName,
             'gender' => $request->input('gender'),
             'email' => $request->input('email'),
             'postcode' => $request->input('postcode'),

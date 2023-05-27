@@ -16,7 +16,7 @@
       <div class="contact-form__heading">
         <h2>管理システム</h2>
       </div>
-      <form class="form" method="POST" action="/search">
+      <form class="form" method="GET" action="/search">
         @csrf
         <div class="flex">
           <div class="form__group__name">
@@ -25,7 +25,7 @@
             </div>
             <div class="form__group-content">
               <div class="form__input--text">
-                <input type="text" name="name" />
+                <input type="text" name="fullname" />
               </div>
             </div>
           </div>
@@ -81,23 +81,23 @@
       </form>
       <div class="category-table">
         <table class="category-table__inner">
-          <tr class="category-table__row">
+          <tr>
             <th class="category-table__header">ID</th>
             <th class="category-table__header">お名前</th>
             <th class="category-table__header">性別</th>
             <th class="category-table__header">メールアドレス</th>
             <th class="category-table__header">ご意見</th>
           </tr>
-          <tr class="style"></tr>
+          @if(isset($results) && count($results) > 0)
           @foreach ($results as $result)
-          <tr class="category-table__row">
+          <tr>
             <td class="category-table__item">{{ $result->id }}</td>
             <td class="category-table__item">{{ $result->fullname }}</td>
             <td class="category-table__item">{{ $result->gender }}</td>
             <td class="category-table__item">{{ $result->email }}</td>
             <td class="category-table__item">{{ $result->opinion }}</td>
             <td class="category-table__item">
-              <form class="delete-form" action="/categories/{{ $result->id }}" method="post">
+              <form class="delete-form" action="/search/{{ $result->id }}" method="post">
                 @csrf
                 @method('DELETE')
                 <div class="delete-form__button">
@@ -107,6 +107,11 @@
             </td>
           </tr>
           @endforeach
+          @else
+          <tr class="category-table__row">
+            <td colspan="5">検索結果はありません。</td>
+          </tr>
+          @endif
         </table>
       </div>
     </div>
