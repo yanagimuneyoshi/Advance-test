@@ -11,17 +11,17 @@ class SearchController extends Controller
     {
 
         // 検索条件を取得する
-        $name = $request->input('name');
+        $name = $request->input('fullname');
         $gender = $request->input('gender');
         $email = $request->input('email');
 
         // 検索処理を実行して結果を取得する（例: Eloquent モデルの利用）
-        $results = YourModel::where('name', $name)
+        $results1 = category::where('fullname', $name)
             ->where('gender', $gender)
             ->where('email', $email)
             ->get();
 
         // 結果をビューに渡す
-        return view('categories', ['results' => $results]);
+        return view('categories', ['results' => $results1]);
     }
 }
