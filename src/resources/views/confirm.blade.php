@@ -23,7 +23,7 @@
           <tr class="confirm-table__row">
             <th class="confirm-table__header">お名前</th>
             <td class="confirm-table__text_up">
-              <input type="text" name="family-name" value="{{ $contact['family-name'] }}"  readonly />
+              <input type="text" name="family-name" value="{{ old('family-name',$contact['family-name']) }}" readonly />
             </td>
             <td class="confirm-table__text_down">
               <input type="text" name="given-name" value="{{ $contact['given-name'] }}" readonly />
@@ -62,7 +62,7 @@
           <tr class="confirm-table__row">
             <th class="confirm-table__header">ご意見</th>
             <td class="confirm-table__text_opinion">
-              <input type="text" name="opinion" value="{{ $contact['opinion'] }}" readonly />
+              <input type="text" maxlength="120" name="opinion" value="{{ $contact['opinion'] }}" readonly />
             </td>
           </tr>
         </table>
@@ -73,7 +73,7 @@
     </form>
     <form class="form__button__fix" action="/" method="post">
       @csrf
-      <button class="form__button__fix-submit" type="submit">修正する</button>
+      <button class="form__button__fix-submit" type="submit" value="back">修正する</button>
     </form>
   </div>
 </main>

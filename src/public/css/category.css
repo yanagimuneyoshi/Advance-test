@@ -14,68 +14,50 @@
   margin: 10px 30px;
 }
 
-.form__group-title--name {
+.form__group-title {
   margin: 30px 10px;
-
 }
 
-.form__input--text--name {
+.form__input--text {
   margin: -55px 200px 100px;
 }
 
-.form__group-title--gender {
-  margin: -120px 500px 100px;
+.form__group-content {
+  display: flex;
+  flex-direction: column;
 }
 
-.form-man--all {
-  margin: -125px 500px 100px 600px;
+.form__group-content label {
+  margin-right: 10px;
 }
 
-.form-man--all--letter {
-  margin: -125px 300px 100px 620px;
+.form__input--radio {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-.form-sex-txt {
-  margin: -26px 300px 100px 360px;
+.form__input--radio input {
+  margin-right: 5px;
 }
 
-.form-man {
-  margin: -123px 700px 0px 700px;
+.form__radio-label {
+  margin-right: 10px;
 }
 
-.form-man span {
-  margin: 0px 10px;
+.form__group-content .form__input--datetime {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
-.form-woman {
-  margin: -123px 600px 0px 780px;
-
+.form__input--datetime-separator {
+  margin: 0px 5px;
 }
-
-.form-woman-letter {
-
-  margin: -24px 600px 0px 450px;
-}
-
-.form__group-title--day {
-  margin: 30px 10px;
-}
-
-.form__input--text--datetime {
-  margin: -55px 0px 10px 200px;
-}
-
-.form__group-title--email {
-  margin: 30px 10px;
-}
-
-.form__input--text--email {
-  margin: -55px 0px 10px 200px;
-}
-
 
 .form__button {
-  margin-top: 70px;
+  margin-top: 50px;
   text-align: center;
 }
 
@@ -91,27 +73,22 @@
 }
 
 .form__button__fix-reset {
-  margin-top: 0px;
+  margin-top: 30px;
   text-align: center;
 }
 
 .form__button__fix-submit {
   padding: 0px;
-  width: 5%;
+  width: 10%;
   height: 0px;
   border: none;
   text-decoration: underline;
-
 }
-
 
 .category-table__inner {
   margin-bottom: 30px;
   text-align: left;
-
 }
-
-
 
 .category-table__row {
   display: flex;
@@ -120,84 +97,37 @@
   list-style-type: none;
 }
 
-
-
-
-
-
-
-.category-table__header__ID {
-  width: 100px;
+.category-table__header {
   margin: 0px 0px 0px 30px;
-}
-.category-table__header__name {
-  width: 100px;
+  text-align: center;
 }
 
-.category-table__header__gender {
-  width: 100px;
-  margin: 0px 0px 0px 50px;
+.flex {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.category-table__header__email {
-  width: 150px;
-  margin: 0px 0px 0px 30px;
+.form__group__name {
+  width: 50%;
+  text-align: left;
 }
 
-.category-table__header__opinion {
-  width: 100px;
-  margin: 0px 0px 0px 120px;
+.form__group__gender {
+    width: 50%;
+    text-align: left;
 }
 
-.style {
-  border-top: 3px double #8c8b8b;
+.form__group__entry {
+      width: 100%;
+      text-align: left;
 }
 
-
-
-
-
-
-
-
-.category-table__item1 {
-  width: 70px;
-  margin: 0px 0px 0px 30px;
+.form__group__email {
+  width: 100%;
+  text-align: left;
 }
 
-.category-table__item2 {
-  width: 100px;
-  margin: 0px 0px 0px 10px;
-}
-
-
-
-.category-table__item3 {
-  width: 50px;
-  margin: 0px 0px 0px 80px;
-}
-
-
-.category-table__item4 {
-  width: 350px;
-}
-
-
-.category-table__item5 {
-
-  width: 290px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.delete-form__button {
-  margin: 0px 0px 0px 100px;
-}
-.delete-form__button-submit {
-  border: none;
-  border-radius: 3px;
-  background: #000;
-  color: #fff;
-  cursor: pointer;
+.form__group__gender__radio {
+  display: flex;
+  flex-wrap: wrap;
 }

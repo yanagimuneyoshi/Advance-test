@@ -141,7 +141,7 @@
           <span class="form__label--required">※</span>
         </div>
         <div class="form__group-title--opinion">
-          <textarea name="opinion" maxlength="120" cols="40" rows="10" value="{{ old('opinion') }}"></textarea>
+          <textarea name="opinion" maxlength="120" cols="40" rows="10" >{{ old('opinion') }}</textarea>
         </div>
         <div class="form__error">
           <!--バリデーション機能を実装したら記述します。-->
@@ -181,4 +181,5 @@
       });
   });
 </script>
+
 </html>
