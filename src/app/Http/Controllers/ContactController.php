@@ -5,9 +5,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ContactRequest;
 use App\Models\Contact;
-use App\Models\Category;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
 
 
 $familyName;
@@ -19,9 +16,6 @@ class ContactController extends Controller
     {
         return view('index');
     }
-
-
-
 
     public function store(ContactRequest $request)
     {
@@ -44,33 +38,9 @@ class ContactController extends Controller
         return view('thanks', ['contact' => $contact]);
     }
 
-
-
-
-
-
-
     public function confirm(ContactRequest $request)
     {
-        // //$validation_array = [
 
-        //     'family-name' => 'required | string',
-        //     'given-name' => 'required | string',
-        //     'gender' => 'required | string',
-        //     'email' => 'required | email',
-        //     'postcode'=> 'required | string',
-        //     'address' => 'required | string',
-        //     'building_name'=> 'required | string',
-        //     'opinion' => 'required | string',
-        // ];
-
-        // //$validator = Validator::make($request->all(), $validation_array);
-
-        // if ($validator->fails()) {
-        //     return redirect('/')
-        //         ->withErrors($validator)
-        //         ->withInput();
-        // };
         if ($request->input('back') == 'back') {
             return redirect('/')
             ->withInput();
