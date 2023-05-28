@@ -86,7 +86,7 @@
 
 
 .line {
-border-top: 3px double #8c8b8b;
+  border-top: 3px double #8c8b8b;
 }
 
 .category-table {
@@ -134,13 +134,13 @@ border-top: 3px double #8c8b8b;
 }
 
 .form__group__gender {
-    width: 50%;
-    text-align: left;
+  width: 50%;
+  text-align: left;
 }
 
 .form__group__entry {
-      width: 100%;
-      text-align: left;
+  width: 100%;
+  text-align: left;
 }
 
 .form__group__email {
@@ -157,11 +157,11 @@ svg.w-5.h-5 {
   height: 30px;
 }
 .delete-form__button-submit{
-
-margin: 0px 0px 0px 40px;
-color: #fff;
-cursor: pointer;
-background: #000;
+  width: 50px;
+  margin: 0px 0px 0px 40px;
+  color: #fff;
+  cursor: pointer;
+  background: #000;
 }
 
 .category-table__item__5 {
