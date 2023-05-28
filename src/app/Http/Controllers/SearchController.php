@@ -38,7 +38,7 @@ class SearchController extends Controller
             $query->where('email', $email);
         }
 
-        $results = $query->paginate(2);
+        $results = $query->paginate(4);
 
         return view('category', compact('results'));
 
