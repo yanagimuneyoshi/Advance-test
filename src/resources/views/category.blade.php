@@ -79,7 +79,8 @@
           </form>
         </div>
       </form>
-      <div>{{ $results->links() }}</div>
+      <div>{!! $results->links('pagination::bootstrap-4') !!}
+      </div>
       <div class="category-table">
         <table class="category-table__inner">
           <tr>
