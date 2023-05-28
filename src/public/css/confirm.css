@@ -20,8 +20,6 @@
   font-weight: bold;
 }
 
-
-
 .confirm-table__text input {
 
   width: 100%;
@@ -54,6 +52,15 @@
   appearance: none;
 
 
+}
+.confirm-table__text_opinion textarea {
+  width: 80%;
+  margin: 100px 0px 0px 50px;
+  padding: 10px;
+  font-size: 1em;
+  border: solid 2px #ffffff;
+  border-radius: 4px;
+  resize: none;;
 }
 
 .confirm-table__row:last-child .confirm-table__header,
@@ -88,5 +95,4 @@
   height: 0px;
   border: none;
   text-decoration: underline;
-
 }

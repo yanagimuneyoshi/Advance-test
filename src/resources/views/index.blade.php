@@ -123,7 +123,7 @@
           <span class="form__label--item">建物名</span>
         </div>
         <div class="form__group-title--name">
-          <input id="text" name="building_name" />
+          <input id="text" name="building_name" value="{{ old('building_name') }}" />
         </div>
         <div class="small-txt-">
           <small class="small-txt-address">例）千駄ヶ谷マンション101</small>
@@ -141,7 +141,7 @@
           <span class="form__label--required">※</span>
         </div>
         <div class="form__group-title--opinion">
-          <textarea name="opinion" maxlength="120" cols="40" rows="10" >{{ old('opinion') }}</textarea>
+          <textarea name="opinion" maxlength="120" cols="40" rows="10">{{ old('opinion') }}</textarea>
         </div>
         <div class="form__error">
           <!--バリデーション機能を実装したら記述します。-->

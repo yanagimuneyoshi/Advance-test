@@ -79,43 +79,44 @@
           </form>
         </div>
       </form>
-      <div>{!! $results->links('pagination::bootstrap-4') !!}
-      </div>
-      <div class="category-table">
-        <table class="category-table__inner">
-          <tr>
-            <th class="category-table__header">ID</th>
-            <th class="category-table__header">お名前</th>
-            <th class="category-table__header">性別</th>
-            <th class="category-table__header">メールアドレス</th>
-            <th class="category-table__header">ご意見</th>
-          </tr>
-          @if(isset($results) && count($results) > 0)
-          @foreach ($results as $result)
-          <tr>
-            <td class="category-table__item">{{ $result->id }}</td>
-            <td class="category-table__item">{{ $result->fullname }}</td>
-            <td class="category-table__item">{{ $result->gender }}</td>
-            <td class="category-table__item">{{ $result->email }}</td>
-            <td class="category-table__item">{{ $result->opinion }}</td>
-            <td class="category-table__item">
-              <form class="delete-form" action="/search/{{ $result->id }}" method="post">
-                @csrf
-                @method('DELETE')
-                <div class="delete-form__button">
-                  <button class="delete-form__button-submit" type="submit">削除</button>
-                </div>
-              </form>
-            </td>
-          </tr>
-          @endforeach
-          @else
-          <tr class="category-table__row">
-            <td colspan="5">検索結果はありません。</td>
-          </tr>
-          @endif
-        </table>
-      </div>
+      <div class=page>{!! $results->links('pagination::bootstrap-4') !!}</div>
+    </div>
+    <div class="category-table">
+      <table class="category-table__inner">
+        <tr>
+          <th class="category-table__header">ID</th>
+          <th class="category-table__header">お名前</th>
+          <th class="category-table__header">性別</th>
+          <th class="category-table__header">メールアドレス</th>
+          <th class="category-table__header">ご意見</th>
+        </tr>
+        <tr class="line"></tr>
+        @if(isset($results) && count($results) > 0)
+        @foreach ($results as $result)
+        <tr class="category-table">
+          <td class="category-table__item__1">{{ $result->id }}</td>
+          <td class="category-table__item__2">{{ $result->fullname }}</td>
+          <td class="category-table__item__3">{{ $result->gender }}</td>
+          <td class="category-table__item__4">{{ $result->email }}</td>
+          <td class="category-table__item__5">{{ $result->opinion }}</td>
+          <td class="category-table__item">
+            <form class="delete-form" action="/search/{{ $result->id }}" method="post">
+              @csrf
+              @method('DELETE')
+              <div class="delete-form__button">
+                <button class="delete-form__button-submit" type="submit">削除</button>
+              </div>
+            </form>
+          </td>
+        </tr>
+        @endforeach
+        @else
+        <tr class="category-table__row">
+          <td colspan="5">検索結果はありません。</td>
+        </tr>
+        @endif
+      </table>
+    </div>
     </div>
   </main>
 </body>

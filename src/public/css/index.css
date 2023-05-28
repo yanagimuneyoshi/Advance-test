@@ -25,8 +25,6 @@
   margin: -40px 0px 0px 300px;
 }
 
-
-
 .form-body {
   margin: 0px 0px 100px 300px;
 }
@@ -35,19 +33,12 @@
   margin: -24px 10px 100px 70px;
 }
 
-
-
-
 .form__label--required {
   margin-left: 5px;
   padding: 4px 6px;
   border-radius: 3px;
   color: #ff0000;
 }
-
-
-
-
 
 .form__error {
   height: 20px;
@@ -65,8 +56,6 @@
   appearance: none;
 }
 
-
-
 .small-txt-tarou {
   margin: 150px;
 
@@ -80,8 +69,6 @@
   margin: -100px 10px 100px 320px;
 }
 
-
-
 .form__input--text--email input {
   padding: 1px;
   width: 400px;
@@ -93,7 +80,6 @@
 
 .form__input--post {
   margin: -25px 10px 100px 300px;
-
 }
 
 .form__input--post input {
@@ -104,7 +90,6 @@
   height: 40px;
   appearance: none;
 }
-
 
 .form__group-title--address {
   margin: -25px 0px 0px 300px;
@@ -119,7 +104,6 @@
   appearance: none;
 }
 
-
 .form__group-title--name {
   margin: -25px 0px 0px 300px;
 }
@@ -131,14 +115,11 @@
   border-radius: 3px;
   height: 40px;
   appearance: none;
-
 }
-
 
 .form__group-title--opinion {
   margin: -25px 0px 0px 300px;
 }
-
 
 .form__group-title--opinion textarea {
   width: 50%;
@@ -150,12 +131,9 @@
   resize: none;
 }
 
-
-
 .form__button {
   margin-top: 70px;
   text-align: center;
-
 }
 
 .form__button-submit {

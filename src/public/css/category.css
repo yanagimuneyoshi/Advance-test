@@ -15,51 +15,39 @@
 }
 
 .form__group-title {
-  margin: 30px 10px;
+  margin: 30px 0px;
+}
+
+.form__input--radio{
+
+  width: 100%;
+  margin: 30px 0px 0px 30px;
 }
 
 .form__input--text {
   margin: -55px 200px 100px;
 }
 
-.form__group-content {
+.form__input--datetime {
   display: flex;
-  flex-direction: column;
-}
-
-.form__group-content label {
-  margin-right: 10px;
-}
-
-.form__input--radio {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.form__input--radio input {
-  margin-right: 5px;
-}
-
-.form__radio-label {
-  margin-right: 10px;
-}
-
-.form__group-content .form__input--datetime {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 10px;
+  align-items: left;
+  justify-content: left;
+  margin: -50px 0px 0px 195px;
 }
 
 .form__input--datetime-separator {
-  margin: 0px 5px;
+  margin: 0px 30px;
+}
+
+.form__group__email {
+  margin: 30px 0px;
 }
 
 .form__button {
   width: 100%;
   text-align: center;
 }
+
 .form__button__fix-reset {
   width: 100%;
   text-align: center;
@@ -88,6 +76,37 @@
   text-decoration: underline;
 }
 
+.page  {
+  text-align: right;
+  margin: 0px 10px 0px 30px;
+  margin-left: auto;
+  width: 10%;
+  writing-mode: horizontal-tb;
+}
+
+
+.line {
+border-top: 3px double #8c8b8b;
+}
+
+.category-table {
+  margin: 200px 0px 0px 0px;
+}
+
+
+
+.category-table__inner {
+
+  width: 60%;
+  margin: -250px 0px 500px 300px;
+}
+
+.category-table td {
+
+  text-align: left;
+}
+
+
 .category-table__inner {
   margin-bottom: 30px;
   text-align: left;
@@ -101,8 +120,7 @@
 }
 
 .category-table__header {
-  margin: 0px 0px 0px 30px;
-  text-align: center;
+  width: 20%
 }
 
 .flex {
@@ -135,7 +153,21 @@
   flex-wrap: wrap;
 }
 svg.w-5.h-5 {
-  /*paginateメソッドの矢印の大きさ調整のために追加*/
   width: 30px;
   height: 30px;
+}
+.delete-form__button-submit{
+
+margin: 0px 0px 0px 40px;
+color: #fff;
+cursor: pointer;
+background: #000;
+}
+
+.category-table__item__5 {
+  width: 220px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }

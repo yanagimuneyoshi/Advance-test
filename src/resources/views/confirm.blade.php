@@ -62,7 +62,7 @@
           <tr class="confirm-table__row">
             <th class="confirm-table__header">ご意見</th>
             <td class="confirm-table__text_opinion">
-              <input type="text" maxlength="120" name="opinion" value="{{ $contact['opinion'] }}" readonly />
+              <textarea type="text" maxlength="120" cols="40" rows="10" name="opinion" readonly>{{ $contact['opinion'] }} </textarea>
             </td>
           </tr>
         </table>
